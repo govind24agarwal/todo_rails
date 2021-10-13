@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="list-group list-group-flush">
+    <% @todo_lists.each do |todo_list| %>
+      <div class="list-group-item">
+        <div class="card-body clearfix">
+          <h2 class="card-title"><%= link_to todo_list.title, todo_list,class:"link-dark" %></h2>
+          <p class="card-text"><%= todo_list.description %></p>
+          <p class="card-text">created by user id: <%= todo_list.user_id%></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class="links">
+  <%= link_to "New Todo List", new_todo_list_path %>
+</div>
